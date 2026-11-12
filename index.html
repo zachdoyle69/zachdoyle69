@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zach</title>
+<meta name="description" content="zach — performance marketing — z@zachdoyle.com">
+<style>
+  html,body{margin:0; height:100%; background:#fff}
+  body{overflow:hidden; height:100svh}
+  canvas{display:block; width:100vw; height:100svh; touch-action:none}
+  .sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+</style>
+</head>
+<body>
+  <h1 class="sr">zach — performance marketing — <a href="mailto:z@zachdoyle.com">z@zachdoyle.com</a></h1>
+  <canvas id="c" aria-hidden="true"></canvas>
+
+<!-- ============ THE ART ============
+     Plain text. Swap in any ASCII art: the push effect, hidden signature and cursor adapt to it. -->
+<script id="art" type="text/plain" data-mobile-overflow="0.98" data-sig="center">
+                                                                                                .      ....          ..
+                                         ..                                                   ...         .         ..
+                               ...     .....                                                                        ..         ..
+                                  .  ...                             .............................                 .         ..       .....
+              .            ...      ..                                 .    .........................  ....       ..        ...          ......
+                      .........    ..                                                          .........                                    .....
+                    .........    ....  .                                  ........      ....::::::::..:..........                             .....
+                    .            ..   .                             ............. ..:.................................................           ....
+                          . .    .                ..........:..................... ...........       ...........:::........................        ....
+                             ...     .       ...........  .........................                      .    ..............................        ...
+                              .         ....... ..      ..........    .. ........ ..         ......            ...................:::.      ..     ....
+              .             ...          . .          ........         .......... ...      .....                ......................::::::       ....
+            ...........    .     ....               ........           .....  .......    ....                  . ......:..................:::.    ......
+              .........:..   .  . ....             .......            ......    .....                           ....::......        .  .......::. .......
+                     .....       .....            .......             .....     .......                         ..:::....              .  .  ......   ...
+                      ... ....    .....          ......              ......     .....                          .::::.                        ......:.   ..
+               .        ......      ...                             .:....      ....          .       ...      :::..                          . .....:.. ..
+             .             .        ....                            ::...       ....                  ...     :::..                           ..   ..........
+          .......                   ......           ...........    .....      .....                 .....   ::...                           ..:::.  .........
+           ..........              ............   ..............    .....      ....   ..             ....   .....       -:....::::::::..:::...................
+                 ...:....         ...   ..................  ..     ::...      .....  ....           ....  .:...         .............       .   ........ ....
+             .     ..... ...             ........  .....           .:..       .  ..   ....          ....  ....               .     ...          ..........  .
+             ...        . ....    .         .   .                             ....    .....         ....         ..                        .... .... ....
+                              .                    .:::.        .             ... .    .....        ....         ...                     .  ...  ........
+                          ...              ..::   .....:::   .......::::...             ......      ....        .                           .     ......
+               .                          ...::::........::::............:::..             ..          .      .  ..                                ......  .
+                      .                  . ...::--::  ...:-----.     .........:--.            :--==-:                                               ......
+.                   .....                .  ...:----::   .::-:::            ....            ::::::-------------:::-::::............                   .....    .
+                   .  ...  .    .       .      ..::::..   ..::...  .   :::.....:-:        --:.........:----::::-::..:::::::::::::::.....                ....
+    .            .......   .    ...             ...:..:. . ....::.  . .:::::..::...    ---:::..:.   .....::-::.:-::::-------:::::.:::::....               ...
+                ......       ......        ..... .....:::.. ...:::.   .:.:... .::::.SS::::....            ...::.:::::---::::.:::::::...::::..  ....
+              .......        .... ::::-:...::..... ..:.:-. .  .::. :==:.:--..-:.....=...:...S=..            .:.:-:--:::::::::::::.................:..
+             ......              ..:::-...::::.....          .:::-=S$S-.:-::=+S$SS+:::.....SSSSSS:...       :-=---:::::::-::::::............... ...:.. .
+            .....       ..:::..:. ........::::....... ..  ..:--=S$$SSSS$S+SSSSSSSS--::...+SS$$$$$S$S...   .:--==-::..:::--:::................... ........
+            ....  :..........:::----::  ..::........    .:--=+S$SSS$$$SSSSSSSSSSSS$=::::---==+SS$$$SS+=..:----:::...:---::................ ..... .........
+            ...........  ......:..::.......... ...     :-==+SSSSS$SSSSSS$$$S$$SSSSSS$$$SSSS+===+++S++++.:-::.... .::--::...............    ...... ..::.....
+           ..........        ...........::-....      .-==++S$SSS$SSSS$S++S$$SSS$$S++S$$$SSSSSS++=+++=-::::::....::---:...............     .......  ... ....
+           ....  ..            ..  ... ... ....     .-==++S+++$$S+++--=+S+++SS+SSSSSSS++===---=====-::--::... .::.:::.......:......      .... .......   ....
+            .. ..          ::--::-::::.........    ::--=+=+++++==-==--:::====++++=+======+===-::-:..---::.. .::::... ......:....          ............     .
+         . . ....         ...:.....:...::......   .:::=+++S+==:..        :--:---:--====::     .....::.::....:::...     ..::::.             ....... .......  .
+        ... ...             ..................   .::.:==-:::              .:. =S$$$$::::        .........::::...      ..::-:.                 ..    ........
+       .... ...         :::::.:...        ...   ..:..-::.                 ...=++--=S::.         .   .. ....::.       .:.:::.                 .:.           ...
+        .     .      . ........:::     ......   ....::.        ..          ..SS=--=-S-.    ...        ...... .      ::......       ..        ...::           ...
+       ..  ...:::........ .    .   ..........  ....:--.     .........      .+$-::::-:S:     ....... ...  . :-:   .:::.....        .....       ....::           .
+      . . ...........             ............ ...-==+=    ...........  .  +=:..:::.::SS..  ........  ..  -=-:..::.....            .....       .......       ...
+        .. .. ....              ..............  ..-=+$S.  ... ...........S+=:....:.....=$S$.... .:::...   $S=:.......               .....           ..
+          .     .               ..:..:........  ..:-+S$: ....:-SSS$SSS$S$S=::. ..:.  ..:=++SS$$$SS:..... +S$-......                 ......          ...
+        ................        .....:......... .-:-+S$S$$++S-$$S+=----=+=+.    .:    ..==---====+SSSS$SS$SS-...:.                   .....           ...
+       ... ................... .:....:........  .--=+++S+++=:--:::.---=---S .   :S=     S=---:-::::--:===+S$+=                        ....:    :----: ..
+                      ..........:....:........  ---:-:===---:-----::::--===S$+$S+==+S+$S+-=--:::::---=:----::-.             .         ....::---.:.....:..
+                .              :.::....... ..   :-----==:==--------::--=++===+S==+S++=++++==---===-=-==+-+=-.-:-::.                    ...... ..........::
+              ..               :.::...:......  .::-===-:=-======---:---SSSS+SSS$SS++S$S$SS++-::----===+==-:-.....:::-:.  .              .....        .....
+.......... ....               .:::...........  :--:::.......:::==--:==+$$$S-+++S-:=++-+=SS+$S:::---=+::::----. .....:::.                ......       .  ..
+..............                 ..............  ::.:...     ....--::-=:-==-=:.=$$$+=SS+=.-:=S-+-:::==-........::.     .::                ......:...      ..
+   ........ ....                ........ .....  ..   ...     ...:::-+=$+.+$+ S$++S=SSS+=S$:+S-=:.::..   ..:....::.    .:.              ......  ..       ...
+          ....                     ...... ...... .. ..:....    ..:-:-===.=== :=::. :---=S=:SS..=-:.    ..:::::....   ....             .........         ...
+          .......::::                 ..... ....... ::::...     :-:-:--:                  :=+-=:=.....:::..:::  .    ...              ......        ::.......
+    ....:::..........                   .... ......-:.......    ::-....                      ..........: ..:. ..    .::.              ..........:::.....  ....
+.................              . ...        .     ..      ...   :......                    . .:-:....... ..:=      .::::::           .........:::.....      .
+...... ..     .              .  .             .=--=-.            . ...                     .. .::  ....: ..::  ..... ..::::         .......:-:.:..          .
+ ..      .... ..           .                   -=...:    ....   ....                           ::   ....::::::-:....  ...::.       ........::..            ..
+          .......                    ....       :=.:    .:=+=.                                       .::...:.......    ..........::::.:::....  .            ..
+     .........  ..                 .....         .:=.   ..::-          ....                          .                    ....:..:::::::......
+  .......       .                  ...            ...:-.:.:::                ..  .                      :-...              .........:.......     ......
+  ....        .   .:::::::::::---=-                ....:...:.    -+=+:    .........                     :=::=                 .........................
+                 .:.......:::..::-:::.              .........:===++==--.............. .    ...        .:-=-===+:                 ...............................
+               ...................::.::-:            .....:=------::.::+==++++=-:......  ....         .=-:::::-==-.                    ..............::::.......
+              ....    ..:----.   .......:.::--:      .....:::-::.... .-=---:--::.......     .........-:-=-==:.::-=:--.                      .... ....:..........
+             .::..::::::::::::..:.     .......:      ... .::::... ...--:::.......     ...............=-:::---:..:---:--=.                        ......
+           .......................:.. .. ....        ... .:::...  ..::::..  --===+-      ....:...   ::....::--:...::--.:===-.                     ..
+          ....... .....       ......                   ..::::... . :-::.. .:-:::::::               .... ....:--:....::-=:::--               .  .:::::..........
+        ....   ..        .   .                 ..::::....::... . .:-::.. ..-::......   -:           .. .. ..:::-:......-:.::-.             . ..:::::............
+             ...        ....  ....:::::::::-.............::.::...::::.. ..:::..   .:::==++--S$..SS$S+S$-: .......:.....::.:::.          ..:::..........      ...
+            ..          ..     .........:::---........ .:::.:.:.::::.. ..:::... .:.:::-:-:.--- :--.=-::::. ......::.....:...::         . ............          .
+          ..         ....  ........     ...:::::.   . ..::....::::... ..:::...    .::::::...::  -- -:-::.  .......:.:....:...:.     ...
+          .         ....  .......          .::::::.   ..::...::.::.....:::....  .:.::::...--:-++==++==-:. .........:...:.......    .:..........:.:.
+     .....          ...     ....             ......:  ...:...................:::.:::::...::-:-:---:--::..  ...............:.....    ............:........
+       ...::        .      . ...              ....:::.........................::::::.....:==----=++-=--::. .....................               ................
+         ....::              ...               ....:..........................::..... ..:===++++SS++++==:.   ..........:.........                     ... ......
+            ......             ..                 .... .....................:..........::--==++SSSSSS+=-:..   ...................   .   ......       .       ..
+             .....:--.          ..                     ...........................   .::--=====++++++=--::.    ..................:-::..  ... ......
+                .. .:    ..    .....                   ...............................:::::-==-----::--:..       .............::-:.....     ............
+             .::::.............:-...:.   ....          ...........................  ....:::.......::.....         ..........:-:.:.    .....      .............
+              .        ..........:...::    ..          .............. ...........         ..........                ....... .....  ... .::..       .  ..........
+                               ....  ....              .............:.::........                                       .......  ...... .::.. .        .
+                                      .....            .......... .  ....::::..                                          ....... ::... ..:..  ..          .
+                                     . ...:.           ... ........    ......::    .                          .-:-.          .. ..::-:.....   ..
+                   :..                   ..             ....... .:::..     ....::  ...          ...     .::-:.::::.::           ....:::-:      .
+                  .....         ::.             ...     .......  .....::::.  ......            .. ..    ...::......:::-.          .....:::     .   .     .
+          .....   .....        .:...          ......   .........   ..........  .....            .....   ......  .......:-          ......::.      .      .
+          .....  ...         ..... .     .....        ..........         ..........             .....    .......  ......:-           .....::.             .
+         ......   .        :::..  .     ............  .....                  .....              .   .     ......    .....::.          .....:::
+         .....    ..  .  .::....            .......   .....            ...      ...  ......         .       ...... . ......::          .....:::.
+        ....      ..     .......                     .. .                . ....       ..  ....      ..        .......  ......::         ........
+         ....      .     ......                   :.:       ..::         .  ....            ....     .         ...... . ....::::.       ........
+         ......    .    .... ..                  ::...     ......                            ....                ..... . .........      .. .....
+          ......   .   .......                 .:.....    .....                                 ...               .....      ... .      ..   ....
+          ......       :......                :..   .     :....        .... .                    ....              .....      ... ..    ..   ....    ...
+           .......... .........             ...   .       .....        . .........               ...                  ..       ... .    ..  .....    .....
+           .....     . ..... ..           ....   .        ....                 ......            ....                  ..       ...  :...     ...    .......
+              ...    .......  ..        ....   .         .                         .....    ...:.:..                    .         .   ...    . ..         .....
+                 ..     ....  ....     ...   .        ..                              ....   ......:..              .    ..             .     ....            ..
+                    ..   .... ....   ..... ..       .   ..                               ... .    ...:.   .         ..    .                     ..
+                       .. ..       ....  ...   ..      ..            ....                 ......   .....:.             .                        ...
+                        ....     ...    ...            ...              ..........         ... ...     ...::          ..                          ..
+                           ..   ..      .                                        ..... .    ..  ....       ...::.    ...                          ...
+                   .  ...  .. ...    ..                .                              ....         ..        ....:::.....                         ... ...
+                            ....                           .                            .                      . ........                          ..  .
+                             ...                                                                                    ...                                  .
+     .                         ..                                                                                     .
+                                ..
+                                 ..
+</script>
+
+<script>
+(function(){
+  /* ---------------- config ---------------- */
+  var SIG    = ['zach', 'performance marketing', 'z@zachdoyle.com'];
+  var EMAIL  = 'z@zachdoyle.com';
+  var FONT   = '"Courier New", "Liberation Mono", Cousine, ui-monospace, Menlo, monospace';
+  var LH     = 1.12;                     // line height (em) - the art was drawn for this
+  var RED    = '#e3120b';
+  var CURSOR_COLORS = ['#e3120b','#00a3ff','#ffd000','#ff2bd6','#13c95f','#ff7a00','#7a3cff'];
+
+  var CENTER = document.getElementById('art').getAttribute('data-sig') === 'center';   // signature centered on screen, lines centered
+  var raw = document.getElementById('art').textContent.replace(/^\n+|\s+$/g, '');
+  var ART = raw.split('\n');
+  var ROWS = ART.length, COLS = Math.max.apply(null, ART.map(function(l){ return l.length; }));
+  ART = ART.map(function(l){ while(l.length < COLS) l += ' '; return l; });
+
+  var canvas = document.getElementById('c'), ctx = canvas.getContext('2d');
+  ctx.font = 'bold 100px ' + FONT;
+  var CHW = ctx.measureText('M').width / 100;
+
+  // how much each character "covers" - used to hide the signature under the densest part of the art
+  var HEAVY = '$S%#@&gdbqpPkKBMWNQ8', LIGHT = ' .,:;\'`"-_^~';
+  function weight(ch){ return ch === ' ' ? 0 : HEAVY.indexOf(ch) >= 0 ? 1 : LIGHT.indexOf(ch) >= 0 ? .2 : .55; }
+
+  /* ---------------- layout + particles ---------------- */
+  var dpr, W, H, fs, cw, ch, ox, oy, cells = [], sig = null, cursorCell = null;
+
+  function layout(){
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    W = window.innerWidth; H = window.innerHeight;
+    canvas.width = W*dpr; canvas.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    // wide art on a phone: let the edges run off-screen a little so the characters stay legible
+    var mo = parseFloat(document.getElementById('art').getAttribute('data-mobile-overflow')) || .94;
+    var overflow = W < 640 ? mo : .94;
+    fs = Math.min(W*overflow/(COLS*CHW), H*.86/(ROWS*LH), 34);
+    cw = fs*CHW; ch = fs*LH;
+    ox = (W - COLS*cw)/2; oy = (H - ROWS*ch)/2;
+
+    // signature size, in pixels and in cells
+    ctx.font = 'bold 100px ' + FONT;
+    var widest = Math.max.apply(null, SIG.map(function(s){ return ctx.measureText(s).width/100; }));
+    var sfs = Math.max(12, Math.min(fs*.62, COLS*cw*.5/widest)), slh = sfs*1.18;
+    var bwPx = widest*sfs, bhPx = slh*SIG.length;
+    var bc = Math.ceil(bwPx/cw) + 1, br = Math.ceil(bhPx/ch) + 1;
+
+    // find where the art is densest for a block that size
+    var best = -1, bestR = 0, bestC = 0;
+    for(var r0=0; r0<=ROWS-br; r0++) for(var c0=0; c0<=COLS-bc; c0++){
+      var s = 0;
+      for(var r=r0; r<r0+br; r++) for(var c=c0; c<c0+bc; c++) s += weight(ART[r][c]);
+      s -= Math.abs((c0+bc/2) - COLS/2)*.12 + Math.abs((r0+br/2) - ROWS*.45)*.35;   // prefer the middle, where people swipe
+      if(s > best){ best = s; bestR = r0; bestC = c0; }
+    }
+    var bx = ox + (bestC + (bc - bwPx/cw)/2)*cw, by = oy + (bestR + (br - bhPx/ch)/2)*ch;
+    if(CENTER){                                   // dead center of the screen instead of the densest spot
+      bx = W/2 - bwPx/2; by = H/2 - bhPx/2;
+      bestC = Math.max(0, Math.floor((bx - ox)/cw)); bestR = Math.max(0, Math.floor((by - oy)/ch));
+      bc = Math.min(COLS - bestC, Math.ceil((bx + bwPx - ox)/cw) - bestC + 1);
+      br = Math.min(ROWS - bestR, Math.ceil((by + bhPx - oy)/ch) - bestR + 1);
+    }
+    ctx.font = 'bold ' + sfs + 'px ' + FONT;
+    sig = {fs:sfs, lh:slh, x:bx, y:by, r0:bestR, c0:bestC, br:br, bc:bc,
+           email:{x:CENTER ? W/2 - ctx.measureText(EMAIL).width/2 : bx, y:by + slh*2, w:ctx.measureText(EMAIL).width, h:slh}};
+
+    canvas.setAttribute('data-sig', [Math.round(bx), Math.round(by), Math.round(bwPx), Math.round(bhPx)].join(','));
+
+    cells = [];
+    for(var r=0;r<ROWS;r++) for(var c=0;c<COLS;c++){
+      var chr = ART[r][c];
+      var inSig = r >= bestR && r < bestR+br && c >= bestC && c < bestC+bc;
+      if(chr === ' ' && !inSig) continue;            // blank cells over the signature still get a tile
+      var hx = ox + (c+.5)*cw, hy = oy + (r+.5)*ch;
+      cells.push({ch:chr, hx:hx, hy:hy, x:hx, y:hy, vx:0, vy:0});
+    }
+
+    // block cursor: a $ toward the upper right of the signature area
+    var tx = ox + (bestC + bc*.85)*cw, ty = oy + (bestR - 1.5)*ch, bestD = 1e9;
+    cursorCell = null;
+    var target = ART.join('').indexOf('$') >= 0 ? '$' : null;      // land on a $ if the art has one, else the heaviest character
+    cells.forEach(function(k){
+      if(target ? k.ch !== target : weight(k.ch) < 1) return;
+      var d = Math.hypot(k.hx-tx, (k.hy-ty)*1.5); if(d < bestD){ bestD = d; cursorCell = k; }
+    });
+    awake = true;
+  }
+
+  /* ---------------- pointer ---------------- */
+  var px = -9999, py = -9999, active = false, touch = false, awake = true, downRevealed = false;
+  function radius(){ return Math.max(70, fs*4.6) * (touch ? 1.25 : 1); }
+
+  canvas.addEventListener('pointermove', function(e){ px = e.clientX; py = e.clientY; if(e.pointerType !== 'touch' || touch) active = true; awake = true; });
+  canvas.addEventListener('pointerdown', function(e){
+    touch = e.pointerType === 'touch'; px = e.clientX; py = e.clientY; active = true; awake = true;
+    downRevealed = emailRevealed();
+  });
+  canvas.addEventListener('pointerup', function(e){ if(e.pointerType === 'touch'){ active = false; touch = false; } });
+  canvas.addEventListener('pointerleave', function(){ active = false; });
+  canvas.addEventListener('pointercancel', function(){ active = false; touch = false; });
+
+  function inEmail(x,y){ var e = sig.email; return x >= e.x-4 && x <= e.x+e.w+4 && y >= e.y-2 && y <= e.y+e.h+2; }
+  function emailRevealed(){
+    var e = sig.email, n = 0, moved = 0;
+    cells.forEach(function(k){
+      if(k.hx > e.x && k.hx < e.x+e.w && k.hy > e.y-ch/2 && k.hy < e.y+e.h+ch/2){ n++; if(Math.hypot(k.x-k.hx, k.y-k.hy) > cw*.9) moved++; }
+    });
+    return n > 0 && moved/n > .3;
+  }
+  canvas.addEventListener('click', function(e){
+    if(inEmail(e.clientX, e.clientY) && (downRevealed || emailRevealed())) location.href = 'mailto:' + EMAIL;
+  });
+  canvas.addEventListener('mousemove', function(e){
+    canvas.style.cursor = (inEmail(e.clientX, e.clientY) && emailRevealed()) ? 'pointer' : 'default';
+  });
+
+  /* ---------------- physics + drawing ---------------- */
+  function step(){
+    var R = radius(), R2 = R*R, push = R*.15, moving = false;
+    for(var i=0;i<cells.length;i++){
+      var k = cells[i];
+      if(active){
+        var dx = k.x - px, dy = k.y - py, d2 = dx*dx + dy*dy;
+        if(d2 < R2){ var d = Math.sqrt(d2) || .01, f = 1 - d/R; f = f*f*push; k.vx += dx/d*f; k.vy += dy/d*f; }
+      }
+      k.vx += (k.hx - k.x)*.03; k.vy += (k.hy - k.y)*.03;     // spring home, slowly enough to read
+      k.vx *= .82; k.vy *= .82;
+      k.x += k.vx; k.y += k.vy;
+      if(Math.abs(k.vx) + Math.abs(k.vy) > .02 || Math.abs(k.x-k.hx) + Math.abs(k.y-k.hy) > .3) moving = true;
+      else { k.x = k.hx; k.y = k.hy; k.vx = k.vy = 0; }
+    }
+    return moving || active;
+  }
+
+  var blinkOn = true, lastBlink = 0, cursorColor = 0;
+  function draw(){
+    ctx.fillStyle = '#fff'; ctx.fillRect(0,0,W,H);
+
+    // the signature underneath
+    ctx.fillStyle = RED; ctx.textAlign = CENTER ? 'center' : 'left'; ctx.textBaseline = 'top';
+    ctx.font = 'bold ' + sig.fs + 'px ' + FONT;
+    SIG.forEach(function(s,i){ ctx.fillText(s, CENTER ? W/2 : sig.x, sig.y + i*sig.lh + sig.lh*.08); });
+
+    // every character carries a white tile that covers what's beneath it
+    ctx.fillStyle = '#fff';
+    var i, k;
+    for(i=0;i<cells.length;i++){ k = cells[i]; ctx.fillRect(k.x - cw/2 - .6, k.y - ch/2 - .6, cw + 1.2, ch + 1.2); }
+
+    ctx.fillStyle = '#000'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.font = 'bold ' + fs + 'px ' + FONT;
+    for(i=0;i<cells.length;i++){ k = cells[i]; if(k.ch !== ' ') ctx.fillText(k.ch, k.x, k.y + fs*.04); }
+
+    if(cursorCell && blinkOn){
+      k = cursorCell;
+      ctx.fillStyle = '#000'; ctx.fillRect(k.x - cw/2, k.y - ch/2, cw, ch);
+      ctx.fillStyle = CURSOR_COLORS[cursorColor]; ctx.fillText(k.ch, k.x, k.y + fs*.04);
+    }
+  }
+
+  function frame(t){
+    var dirty = false;
+    if(awake){ awake = step(); dirty = true; }
+    if(t - lastBlink > 530){
+      blinkOn = !blinkOn; lastBlink = t; dirty = true;
+      if(blinkOn) cursorColor = (cursorColor + 1) % CURSOR_COLORS.length;
+    }
+    if(dirty) draw();
+    requestAnimationFrame(frame);
+  }
+
+  var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(function(){ layout(); draw(); }, 80); });
+  layout(); draw(); requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
