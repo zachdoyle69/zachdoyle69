@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>zach</title>
 <meta name="description" content="zach — performance marketing — z@zachdoyle.com">
+<!-- Google Analytics (GA4): set your Measurement ID here -->
+<script>
+  var GA_ID = 'G-DPY8D6179D';
+  if (/^G-[A-Z0-9]+$/.test(GA_ID)) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+  function track(name, params){ try { if (window.gtag) gtag('event', name, params || {}); } catch(e){} }
+</script>
 <style>
   html,body{margin:0; height:100%; background:#fff}
   body{overflow:hidden; height:100svh}
@@ -241,7 +255,7 @@
     return n > 0 && moved/n > .3;
   }
   canvas.addEventListener('click', function(e){
-    if(inEmail(e.clientX, e.clientY) && (downRevealed || emailRevealed())) location.href = 'mailto:' + EMAIL;
+    if(inEmail(e.clientX, e.clientY) && (downRevealed || emailRevealed())){ track('email_click'); location.href = 'mailto:' + EMAIL; }
   });
   canvas.addEventListener('mousemove', function(e){
     canvas.style.cursor = (inEmail(e.clientX, e.clientY) && emailRevealed()) ? 'pointer' : 'default';
@@ -290,9 +304,10 @@
     }
   }
 
+  var revealed = false;
   function frame(t){
     var dirty = false;
-    if(awake){ awake = step(); dirty = true; }
+    if(awake){ awake = step(); dirty = true; if(!revealed && emailRevealed()){ revealed = true; track('signature_reveal'); } }
     if(t - lastBlink > 530){
       blinkOn = !blinkOn; lastBlink = t; dirty = true;
       if(blinkOn) cursorColor = (cursorColor + 1) % CURSOR_COLORS.length;
